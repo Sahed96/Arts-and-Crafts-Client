@@ -5,6 +5,9 @@ import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import Root from "../Root/Root";
 import AddCraft from "../Pages/AddCraft/AddCraft";
 
+import ViewDetails from "../Pages/ViewDetails/ViewDetails";
+import MyCraft from "../Pages/MyCraftList/MyCraft";
+
 
 
 
@@ -20,13 +23,13 @@ const routes = createBrowserRouter([
             loader: () => fetch('http://localhost:5000/addCraft')
             
         },
-        // {
-        //     path: '/details/:id',
-        //     element: <PrivateRoute>
-        //       <CardDetails />
-        //     </PrivateRoute>,
-        //     loader: ()=> fetch('/card.json')
-        // },
+        {
+            path: '/details/:_id',
+            element: 
+              <ViewDetails />,
+            
+            loader: () => fetch('http://localhost:5000/addCraft')
+        },
         // {
         //     path: '/login',
         //     element: <Login></Login>
@@ -43,12 +46,10 @@ const routes = createBrowserRouter([
             loader: () => fetch('http://localhost:5000/addCraft')
                 
         },
-        // {
-        //     path: '/unique',
-        //     element: <PrivateRoute>
-        //       <Unique></Unique>
-        //     </PrivateRoute>    
-        // },
+        {
+            path: '/myCraft',
+            element: <MyCraft/>    
+        },
       ]
     },
 
