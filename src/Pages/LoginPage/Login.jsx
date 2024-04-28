@@ -81,7 +81,7 @@ const Login = () => {
 	</form>
 	<div className="flex items-center pt-4 space-x-1">
 		<div className="flex-1 h-px sm:w-16 dark:bg-gray-300"></div>
-		<p className="px-3 text-sm dark:text-gray-600">Login with social accounts</p>
+		<p className="px-3 text-base dark:text-gray-600">Login with social accounts</p>
 		<div className="flex-1 h-px sm:w-16 dark:bg-gray-300"></div>
 	</div>
 	<SocialLogin ></SocialLogin>

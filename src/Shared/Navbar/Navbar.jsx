@@ -14,9 +14,9 @@ const Navbar = () => {
       </div>
       <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
         <li><NavLink to='/'>Home</NavLink></li>
-        <li><a>Arts & Crafts</a></li>
+        <li><NavLink to='/allCraft'>Arts & Crafts</NavLink></li>
         <li><NavLink to='/addCraft'>Add Crafts</NavLink></li>
-        <li><a>My Art&Craft</a></li>
+        <li><NavLink to='/myCraft'>My Art&Craft</NavLink></li>
       </ul>
     </div>
     <a className="btn btn-ghost text-xl">Crafty Labs</a>
@@ -24,7 +24,7 @@ const Navbar = () => {
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
       <li><NavLink to='/'>Home</NavLink></li>
-      <li><a>All Arts & Crafts</a></li>
+      <li><NavLink to='/allCraft'>All Arts & Crafts</NavLink></li>
       <li><NavLink to='/addCraft'>Add Crafts</NavLink></li>
       <li><NavLink to='/myCraft'>My Art & Craft</NavLink></li>
     </ul>

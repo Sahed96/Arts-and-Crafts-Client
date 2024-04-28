@@ -105,7 +105,7 @@ const Register = () => {
             }</span>
 		</div>
 		
-		<button className="block w-full p-3 text-center rounded-sm dark:bg-rose-300 hover:bg-rose-500 hover:text-white">Register</button>
+		<button className="block mx-auto p-3 text-center rounded-full dark:bg-rose-300 hover:bg-rose-500 hover:text-white">Register</button>
 	</form>
 	
 	<p className="text-md text-center sm:px-6 dark:text-gray-600">Already have an account? Please

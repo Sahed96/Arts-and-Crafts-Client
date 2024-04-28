@@ -8,6 +8,7 @@ import Login from "../Pages/LoginPage/Login"
 import Register from "../Pages/RegisterPage/Register";
 import ViewDetails from "../Pages/ViewDetails/ViewDetails";
 import MyCraft from "../Pages/MyCraftList/MyCraft";
+import AllCrafts from "../Pages/AllCrafts/AllCrafts";
 
 
 
@@ -28,8 +29,8 @@ const routes = createBrowserRouter([
             path: '/details/:_id',
             element: 
               <ViewDetails />,
+              loader: () => fetch('http://localhost:5000/addCraft')
             
-            loader: () => fetch('http://localhost:5000/addCraft')
         },
         {
             path: '/login',
@@ -44,6 +45,12 @@ const routes = createBrowserRouter([
         {
             path: '/addCraft',
             element: <AddCraft/>,
+            loader: () => fetch('http://localhost:5000/addCraft')
+                
+        },
+        {
+            path: '/allCraft',
+            element: <AllCrafts />,
             loader: () => fetch('http://localhost:5000/addCraft')
                 
         },
