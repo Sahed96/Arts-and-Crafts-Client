@@ -6,7 +6,7 @@ const ViewDetails = () => {
     const {_id} = useParams();
     const craftDetails = details.find(item => item._id == _id);
     
-    const {image,stock_status,processing_time,customization,rating,price,bio,subcategory_name,item_name} = craftDetails;
+    const {image,stock_status,processing_time,customization,rating,price,subcategory_name,item_name} = craftDetails;
     return (
         <section className="dark:bg-gray-100 dark:text-gray-800">
 	<div className="container p-5 flex flex-col-reverse mx-auto lg:flex-row">

@@ -30,13 +30,13 @@ const AddCraft = () => {
         })
         .then(res => res.json())
         .then(data => {
-            console.log(data);
+            
             if(data.insertedId)
             Swal.fire({
                 title: 'Success!',
                 text: 'Added Successfully',
                 icon: 'success',
-                confirmButtonText: 'X'
+                confirmButtonText: 'OK'
               })
         })
     }
@@ -57,13 +57,13 @@ const AddCraft = () => {
 				<div className="col-span-full sm:col-span-3">
 					<label htmlFor="website" className="text-sm">subcategory</label>
 					<select className='w-full border-2 p-2 rounded-md' name="subcategory_name" id="subcategory">
-  					<option value="">select a category</option>
-  					<option value="ClaySculpture">Clay Sculpture</option>
-  					<option value="StoneSculpture">Stone Sculpture</option>
-  					<option value="MetalSculpture">Metal Sculpture</option>
-  					<option value="WoodCarving">Wood Carving</option>
-  					<option value="NaturalMaterialSculpture">Natural Material Sculpture</option>
-  					<option value="BeadedSculpture">Beaded Sculpture</option>
+						<option value="">select a category</option>
+					<option value="ClaySculpture">Clay Sculpture</option>
+					<option value="StoneSculpture">Stone Sculpture</option>
+					<option value="MetalSculpture">Metal Sculpture</option>
+					<option value="WoodCarving">Wood Carving</option>
+					<option value="NaturalMaterialSculpture">Natural Material Sculpture</option>
+					<option value="BeadedSculpture">Beaded Sculpture</option>
 					</select>
 				</div>
 				<div className="col-span-full sm:col-span-3">
@@ -89,17 +89,17 @@ const AddCraft = () => {
 				<div className="col-span-full sm:col-span-3">
 					<label htmlFor="website" className="text-sm">customization</label>
 					<select className='w-full border-2 p-2 rounded-md' name="customization" id="customization">
-  					<option value="">Want any customization</option>
-  					<option value="yes">Yes</option>
-  					<option value="no">No</option>
+						<option value="">Want any customization</option>
+						<option value="yes">Yes</option>
+						<option value="no">No</option>
 					</select>
 				</div>
 				<div className="col-span-full sm:col-span-3">
 					<label htmlFor="username" className="text-sm">Stock Status</label>
 					<select className='w-full p-2 border-2 rounded-md' name="stockStatus" id="stockStatus">
-  					<option value="">select Stock Status</option>
-  					<option value="InStock">In stock</option>
-  					<option value="MadeOrder">Made to Order</option>
+						<option value="">select Stock Status</option>
+						<option value="InStock">In stock</option>
+						<option value="MadeOrder">Made to Order</option>
 					</select>
 				</div>
 				<div className="col-span-full sm:col-span-3">
