@@ -58,7 +58,7 @@ const Register = () => {
                 <title>Register- </title>
                 <link rel="canonical" href="http://mysite.com/example" />
             </Helmet>
-            <div className="w-full max-w-md p-8 mx-auto mt-20 lg:mt-10 space-y-3 rounded-xl dark:bg-gray-50 dark:text-gray-800">
+            <div className="w-full max-w-md p-8 mx-auto mt-20 lg:mt-10 space-y-3 border-2 border-rose-300 rounded-xl dark:text-gray-800">
 	<h1 className="text-2xl font-bold text-center">Register Here</h1>
 	<form onSubmit={handleSubmit(onSubmit)} noValidate="" action="" className="space-y-6">
 		<div className="space-y-1 text-sm">
@@ -105,11 +105,11 @@ const Register = () => {
             }</span>
 		</div>
 		
-		<button className="block mx-auto p-3 text-center rounded-full dark:bg-rose-300 hover:bg-rose-500 hover:text-white">Register</button>
+		<button className="block mx-auto p-3 text-center font-semibold rounded-full dark:bg-rose-400 hover:bg-rose-500 hover:text-white hover:font-bold">Register</button>
 	</form>
 	
 	<p className="text-md text-center sm:px-6 dark:text-gray-600">Already have an account? Please
-		<Link to='/login' className="underline font-bold text-primary ml-2">Login</Link>
+		<Link to='/login' className="underline font-bold text-rose-800 ml-2">Login</Link>
 	</p>
 </div>
         </div>

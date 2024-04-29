@@ -46,8 +46,8 @@ const AddCraft = () => {
 		
 		<fieldset className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm dark:bg-gray-50">
 			<div className="space-y-2 col-span-full lg:col-span-1">
-				<p className="font-medium">Profile</p>
-				<p className="text-xs">Adipisci fuga autem eum!</p>
+				<p className="font-bold text-3xl">Add Craft List Here</p>
+				
 			</div>
 			<div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-3">
 				<div className="col-span-full sm:col-span-3">

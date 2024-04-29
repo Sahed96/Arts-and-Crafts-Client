@@ -8,7 +8,8 @@ import Swal from "sweetalert2";
 
 const MyCard = ({card2}) => {
 
-  const {item_name,image,subcategory_name,_id} = card2;
+  const {item_name,image,_id,price,rating,stock_status,customization} = card2;
+  console.log(stock_status);
 
     const handleDelete = (_id) =>{
       console.log(_id);
@@ -44,9 +45,12 @@ const MyCard = ({card2}) => {
         <div className="card card-side bg-rose-100">
         <figure className="pl-3 "><img className="w-[200px] rounded-xl" src={image} alt="img"/></figure>
         <div className=" flex justify-between w-full p-4">
-          <div>
-          <h2 className="card-title text-2xl">{item_name}</h2>
-          <p className=" text-base">{subcategory_name}</p>
+          <div className=" space-y-4">
+          <h2 className="card-title font-semibold text-3xl">{item_name}</h2>
+          <p className=" text-base">Price:{price}</p>
+          <p className=" text-base">Rating: {rating}</p>
+          <p className=" text-base">Stock:{stock_status}</p>
+          <p className=" text-base">Customizable:{customization}</p>
           </div>
           <div className="card-actions justify-end">
           <div className="join join-vertical mt-4 gap-24">

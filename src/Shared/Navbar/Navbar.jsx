@@ -31,22 +31,25 @@ const Navbar = () => {
   </div>
   <div className="navbar-end">
   {
-      user ? <div className=" dropdown dropdown-left dropdown-hover flex ">
+      user ? <div className=" dropdown dropdown-bottom dropdown-end dropdown-hover flex ">
           <label tabIndex={0} className=" btn btn-ghost btn-circle avatar">
             <div className=" w-10 rounded-full">
               <img src={user?.photoURL || ""} alt="" />
             </div>
           </label>
-          <ul tabIndex={0} className="menu menu-sm dropdown-content z-[1] bg-base-100 rounded-box shadow w-auto">
+          <ul tabIndex={0} className="menu menu-sm items-center dropdown-content z-[1] bg-base-100 rounded-box shadow w-44">
             <li>
-              <button className=" btn btn-sm btn-ghost">{user.displayName || 'No User'}</button>
-            </li> 
+              <a className="text-base font-semibold hover:text-rose-600">{user.displayName || 'No User'}</a>
+            </li>
+            <li>
+            
+          <Link to='/login' onClick={logout} className=" text-base font-semibold hover:bg-rose-500 hover:text-white hover:font-bold">Logout</Link>
+          
+              </li> 
           </ul>
-          <div className=" ml-5">
-          <Link to='/login' onClick={logout} className="btn text-base font-semibold hover:bg-rose-500 bg-rose-400 hover:text-white hover:font-bold">Logout</Link>
-          </div>
+          
       </div> 
-      : <Link to='/login' className="btn text-base font-semibold bg-rose-400 hover:bg-rose-500 hover:text-white hover:font-bold">Login</Link>
+      : <Link to='/login' className="btn text-base rounded-full font-semibold bg-rose-400 hover:bg-rose-500 hover:text-white hover:font-bold">Login</Link>
     }
   </div>
 </div>

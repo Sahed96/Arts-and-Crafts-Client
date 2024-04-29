@@ -9,7 +9,7 @@ import { Navigation } from 'swiper/modules';
 const Banner = () => {
     return (
         
-        <Swiper
+        <Swiper className=' mt-20'
                 modules={[Navigation]}
                 spaceBetween={50}
                 slidesPerView={1}

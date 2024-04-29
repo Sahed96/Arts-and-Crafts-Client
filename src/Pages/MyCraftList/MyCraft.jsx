@@ -23,11 +23,6 @@ useEffect(()=>{
 	})
 },[user])
 
-	
-		
-		
-
-	
 
     return (
 		<div>
