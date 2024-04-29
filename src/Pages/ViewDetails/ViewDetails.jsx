@@ -11,9 +11,14 @@ const ViewDetails = () => {
         <section className="dark:bg-gray-100 dark:text-gray-800">
 	<div className="container p-5 flex flex-col-reverse mx-auto lg:flex-row">
 		<div className="flex flex-col px-6 py-8 space-y-6 rounded-2xl sm:p-8 lg:p-12 lg:w-1/2 xl:w-2/5 dark:bg-rose-100 ">
-			<div>
+			<div className=" space-y-3">
                 <h2 className=" text-3xl font-semibold text-right">{item_name}</h2>
                 <p className=" text-right">{subcategory_name}</p>
+                <p className=" bg-teal-300 text-right rounded-full p-2 text-xl font-semibold">Price: {price} </p>
+                <p className="text-xl w-[220px] text-center bg-teal-300 rounded-full p-2 font-semibold">Rating: {rating}</p>
+                <p className="text-xl  text-right bg-teal-300 rounded-full p-2 font-semibold">Customization: {customization}</p>
+                <p className="text-xl w-[280px] bg-teal-300 rounded-full p-2 font-semibold">Processing Time: {processing_time}</p>
+                <p className="text-xl  text-right  bg-teal-300 rounded-full p-2 font-semibold">Stock Status: {stock_status}</p>
             </div>
 		</div>
 		<div className="lg:w-1/2 xl:w-3/5 dark:bg-gray-100">

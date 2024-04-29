@@ -9,6 +9,7 @@ import Register from "../Pages/RegisterPage/Register";
 import ViewDetails from "../Pages/ViewDetails/ViewDetails";
 import MyCraft from "../Pages/MyCraftList/MyCraft";
 import AllCrafts from "../Pages/AllCrafts/AllCrafts";
+import UpdateDetails from "../Pages/UpdateDetails/UpdateDetails";
 
 
 
@@ -57,7 +58,13 @@ const routes = createBrowserRouter([
         {
             path: '/myCraft',
             element: <MyCraft/>,
-            loader: () => fetch('http://localhost:5000/addCraft')    
+            
+        },
+        {
+            path: '/update/:id',
+            element: <UpdateDetails/>,
+            loader: ({params}) => fetch(`http://localhost:5000/addCraft/${params.id}`)
+            
         },
       ]
     },

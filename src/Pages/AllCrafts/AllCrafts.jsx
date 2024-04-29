@@ -26,13 +26,12 @@ const AllCrafts = () => {
       </tr>
     </thead>
     <tbody>
-      {/* row 1 */}
       {
         allData.map((data,index) =>{
             const {item_name,price,rating,stock_status,subcategory_name,_id} =data;
             
             return(
-                <tr className="bg-rose-50">
+                <tr key={index} className="bg-rose-50">
         <th>{index+1}</th>
         <td>{item_name}</td>
         <td>{subcategory_name}</td>
