@@ -26,7 +26,7 @@ const routes = createBrowserRouter([
         {
             path: '/',
             element: <Home></Home>,
-            loader: () => fetch('https://art-and-craft-eight.vercel.app')
+            loader: () => fetch('https://art-and-craft-eight.vercel.app/addCraft')
             
         },
         {
@@ -36,7 +36,7 @@ const routes = createBrowserRouter([
                 <ViewDetails />
             </PrivateRoute>
               ,
-              loader: () => fetch('https://art-and-craft-eight.vercel.app')
+              loader: () => fetch('https://art-and-craft-eight.vercel.app/addCraft')
             
         },
         {
@@ -56,7 +56,7 @@ const routes = createBrowserRouter([
                 <AddCraft/>
             </PrivateRoute>
             ,
-            loader: () => fetch('https://art-and-craft-eight.vercel.app')
+            loader: () => fetch('https://art-and-craft-eight.vercel.app/addCraft')
                 
         },
         {
@@ -66,7 +66,7 @@ const routes = createBrowserRouter([
                 <AllCrafts />
             </PrivateRoute>
             ,
-            loader: () => fetch('https://art-and-craft-eight.vercel.app')
+            loader: () => fetch('https://art-and-craft-eight.vercel.app/addCraft')
                 
         },
         {
@@ -92,7 +92,7 @@ const routes = createBrowserRouter([
                 <UpdateDetails/>
             </PrivateRoute>
             ,
-            loader: ({params}) => fetch(`https://art-and-craft-eight.vercel.app/${params.id}`)
+            loader: ({params}) => fetch(`https://art-and-craft-eight.vercel.app/addCraft/${params.id}`)
             
         },
       ]

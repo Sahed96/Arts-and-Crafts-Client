@@ -23,7 +23,7 @@ const MyCard = ({card2}) => {
           }).then((result) => {
             if (result.isConfirmed) {
             //   
-            fetch(`https://art-and-craft-eight.vercel.app/${_id}`,{
+            fetch(`https://art-and-craft-eight.vercel.app/addCraft/${_id}`,{
                 method: 'DELETE'
             })
             .then(res => res.json())

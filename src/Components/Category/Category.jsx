@@ -9,7 +9,7 @@ const Category = () => {
     
     // console.log(categoryData);
     useEffect(()=>{
-        fetch(`https://art-and-craft-eight.vercel.app`)
+        fetch(`https://art-and-craft-eight.vercel.app/categoryCraft`)
         .then(res => res.json())
         .then(data => {
             setCategory(data);
