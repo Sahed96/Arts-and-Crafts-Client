@@ -1,4 +1,5 @@
 /* eslint-disable react/jsx-key */
+import { Helmet } from "react-helmet";
 import { Link, useLoaderData } from "react-router-dom";
 
 
@@ -8,6 +9,11 @@ const AllCrafts = () => {
 
     return (
         <div className="overflow-x-auto mt-8">
+          <Helmet>
+                <meta charSet="utf-8" />
+                <title>All Crafts- Crafty Labs</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
             <div>
                 
             </div>

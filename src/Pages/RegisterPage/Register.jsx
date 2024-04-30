@@ -3,22 +3,20 @@ import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 
 import { Helmet } from "react-helmet";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa6";
 import toast from "react-hot-toast";
-import Aos from "aos";
+
 import useAuth from "../../AuthProvider/useAuth";
 
 
 const Register = () => {
-  useEffect(()=>{
-    Aos.init({duration:1000})
-},[])
+  
 
     const navigate = useNavigate()
     const [showPass, setShowPass] = useState(false)
 
-    const {createUser,profileUpdate} = useAuth();
+    const {createUser} = useAuth();
 
     const {
         register,
@@ -27,13 +25,13 @@ const Register = () => {
       } = useForm();
       
       const onSubmit = (data) => {
-        const {email,password,name,photo} =data;
+        const {email,password} =data;
         createUser(email,password)
         .then((result) =>{
           const currentUser = result.user
           
           if(currentUser){
-            profileUpdate(name,photo)
+            
          
           toast.success('Account created Successfully ',{
             duration: 2000,
@@ -55,7 +53,7 @@ const Register = () => {
         <div data-aos="zoom-in-down">
             <Helmet>
                 <meta charSet="utf-8" />
-                <title>Register- </title>
+                <title>Register- Crafty Labs</title>
                 <link rel="canonical" href="http://mysite.com/example" />
             </Helmet>
             <div className="w-full max-w-md p-8 mx-auto mt-20 lg:mt-10 space-y-3 border-2 border-rose-300 rounded-xl dark:text-gray-800">

@@ -12,6 +12,7 @@ import AllCrafts from "../Pages/AllCrafts/AllCrafts";
 import UpdateDetails from "../Pages/UpdateDetails/UpdateDetails";
 import Category from "../Components/Category/Category";
 import CategoryCard from "../Components/Category/CategoryCard";
+import PrivateRoute from "./Private/PrivateRoute";
 
 
 
@@ -31,7 +32,10 @@ const routes = createBrowserRouter([
         {
             path: '/details/:_id',
             element: 
-              <ViewDetails />,
+              <PrivateRoute>
+                <ViewDetails />
+            </PrivateRoute>
+              ,
               loader: () => fetch('http://localhost:5000/addCraft')
             
         },
@@ -47,19 +51,30 @@ const routes = createBrowserRouter([
         },
         {
             path: '/addCraft',
-            element: <AddCraft/>,
+            element: 
+            <PrivateRoute>
+                <AddCraft/>
+            </PrivateRoute>
+            ,
             loader: () => fetch('http://localhost:5000/addCraft')
                 
         },
         {
             path: '/allCraft',
-            element: <AllCrafts />,
+            element: 
+            <PrivateRoute>
+                <AllCrafts />
+            </PrivateRoute>
+            ,
             loader: () => fetch('http://localhost:5000/addCraft')
                 
         },
         {
             path: '/myCraft',
-            element: <MyCraft/>,
+            element: 
+            <PrivateRoute>
+                <MyCraft/>
+            </PrivateRoute>
             
         },
         {
@@ -72,7 +87,11 @@ const routes = createBrowserRouter([
         },
         {
             path: '/update/:id',
-            element: <UpdateDetails/>,
+            element: 
+            <PrivateRoute>
+                <UpdateDetails/>
+            </PrivateRoute>
+            ,
             loader: ({params}) => fetch(`http://localhost:5000/addCraft/${params.id}`)
             
         },
