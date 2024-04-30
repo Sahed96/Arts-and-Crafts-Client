@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { useLoaderData, useParams } from "react-router-dom";
 
 
@@ -9,6 +10,11 @@ const ViewDetails = () => {
     const {image,stock_status,processing_time,customization,rating,price,subcategory_name,item_name} = craftDetails;
     return (
         <section className=" dark:text-gray-800">
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>{item_name}- Crafty Labs</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
 	<div className="container p-5 flex flex-col-reverse mx-auto lg:flex-row">
 		<div className="flex flex-col px-6 py-8 space-y-6 rounded-2xl sm:p-8 lg:p-12 lg:w-1/2 xl:w-2/5 border-2 border-rose-300">
 			<div className=" space-y-3">

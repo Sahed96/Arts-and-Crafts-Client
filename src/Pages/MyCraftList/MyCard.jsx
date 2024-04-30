@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 
+import { Helmet } from "react-helmet";
 import { RiDeleteBin2Line } from "react-icons/ri";
 import { RxUpdate } from "react-icons/rx";
 import { Link } from "react-router-dom";
@@ -42,6 +43,11 @@ const MyCard = ({card2}) => {
     
     return (
         <div className="card card-side bg-rose-100">
+          <Helmet>
+                <meta charSet="utf-8" />
+                <title>my card- Crafty Labs</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
         <figure className="pl-3 "><img className="w-[300px] rounded-xl" src={image} alt="img"/></figure>
         <div className=" flex justify-between w-full p-4">
           <div className=" space-y-4">

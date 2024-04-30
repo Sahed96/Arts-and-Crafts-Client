@@ -51,7 +51,7 @@ const Login = () => {
         <div data-aos="zoom-in-up">
 			<Helmet>
                 <meta charSet="utf-8" />
-                <title>Login- Star Realty</title>
+                <title>Login- Crafty Labs</title>
                 <link rel="canonical" href="http://mysite.com/example" />
             </Helmet>
             <div className="w-full max-w-md p-8 mx-auto mt-20 lg:mt-10 space-y-3 rounded-xl border-2 border-rose-400 dark:text-gray-800">

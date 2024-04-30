@@ -1,10 +1,16 @@
 
+import { Helmet } from 'react-helmet';
 import { useNavigate } from 'react-router-dom';
 
 const ErrorPage = () => {
     const navigate = useNavigate()
     return (
     <section className='bg-white '>
+      <Helmet>
+                <meta charSet="utf-8" />
+                <title>404- Crafty Labs</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
       <div className='container flex items-center min-h-screen px-6 py-12 mx-auto'>
         <div className='flex flex-col items-center max-w-sm mx-auto text-center'>
           <div className=' w-[850px]'>

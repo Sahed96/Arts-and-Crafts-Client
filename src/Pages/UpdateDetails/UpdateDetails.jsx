@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 
@@ -53,6 +54,11 @@ const UpdateDetails = () => {
 
     return (
         <section className="p-6 dark:text-gray-900">
+			<Helmet>
+                <meta charSet="utf-8" />
+                <title>{item_name} Update- Crafty Labs</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
 	<form onSubmit={handleUpdateCraft} className="container flex flex-col mx-auto space-y-12">
 		
 		<fieldset className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm dark:bg-gray-50">
