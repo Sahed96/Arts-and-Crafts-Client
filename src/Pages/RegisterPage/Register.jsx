@@ -8,9 +8,14 @@ import { FaEye, FaEyeSlash } from "react-icons/fa6";
 import toast from "react-hot-toast";
 
 import useAuth from "../../AuthProvider/useAuth";
+import { useEffect } from "react";
+import Aos from "aos";
 
 
 const Register = () => {
+  useEffect(()=>{
+    Aos.init({duration:1000})
+},[])
   
 
     const navigate = useNavigate()
