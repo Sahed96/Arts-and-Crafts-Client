@@ -21,7 +21,7 @@ const AddCraft = () => {
 
         // console.log(newCraft);
 
-        fetch('http://localhost:5000/addCraft',{
+        fetch('https://art-and-craft-eight.vercel.app',{
             method:'POST',
             headers:{
                 'content-type':'application/json'

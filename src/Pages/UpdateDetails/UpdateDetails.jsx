@@ -31,7 +31,7 @@ const UpdateDetails = () => {
 
         // console.log(newCraft);
 
-        fetch(`http://localhost:5000/addCraft/${_id}`,{
+        fetch(`https://art-and-craft-eight.vercel.app/${_id}`,{
             method:'PATCH',
             headers:{
                 'content-type':'application/json'

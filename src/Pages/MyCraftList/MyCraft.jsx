@@ -14,7 +14,7 @@ const MyCraft = () => {
 	const {user} =useAuth() || {};
 
 useEffect(()=>{
-	fetch(`http://localhost:5000/myCraft/${user?.email}`)
+	fetch(`https://art-and-craft-eight.vercel.app/${user?.email}`)
 	
 	.then(res => res.json())
 	.then(data => {
