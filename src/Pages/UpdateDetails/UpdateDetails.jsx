@@ -11,7 +11,7 @@ const UpdateDetails = () => {
 
 	const update = useLoaderData()
 
-	const {item_name,image,price,rating,time,short_description,_id,subcategory_name,customization,stockStatus} =update;
+	const {item_name,image,price,rating,time,short_description,_id,subcategory_name,customization,stock_status} =update;
 	
 	const handleUpdateCraft = e =>{
         e.preventDefault();
@@ -25,9 +25,9 @@ const UpdateDetails = () => {
         const short_description = form.bio.value;
 		const subcategory_name = form.subcategory_name.value;
 		const customization = form.customization.value;
-		const stockStatus = form.stockStatus.value;
+		const stock_status = form.stock_status.value;
        
-        const updateCraft = {item_name,image,price,short_description,rating,time,subcategory_name,customization,stockStatus}
+        const updateCraft = {item_name,image,price,short_description,rating,time,subcategory_name,customization,stock_status}
 
         // console.log(newCraft);
 
@@ -99,7 +99,7 @@ const UpdateDetails = () => {
 				</div>
 				<div className="col-span-full sm:col-span-3">
 					<label htmlFor="username" className="text-sm">Stock Status</label>
-					<select defaultValue={stockStatus} className='w-full p-2 border-2 rounded-md' name="stockStatus" id="stockStatus">
+					<select defaultValue={stock_status} className='w-full p-2 border-2 rounded-md' name="stock_status" id="stockStatus">
 						<option value="">select Stock Status</option>
 						<option value="InStock">In stock</option>
 						<option value="MadeOrder">Made to Order</option>

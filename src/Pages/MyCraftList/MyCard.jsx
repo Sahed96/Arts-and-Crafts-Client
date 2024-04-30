@@ -9,10 +9,9 @@ import Swal from "sweetalert2";
 const MyCard = ({card2}) => {
 
   const {item_name,image,_id,price,rating,stock_status,customization} = card2;
-  console.log(stock_status);
 
     const handleDelete = (_id) =>{
-      console.log(_id);
+      // console.log(_id);
 		Swal.fire({
             title: "Are you sure?",
             text: "You won't be able to revert this!",
@@ -33,7 +32,7 @@ const MyCard = ({card2}) => {
                 if(data.deletedCount > 0)
                 Swal.fire({
                         title: "Deleted!",
-                        text: "Your file has been deleted.",
+                        text: "Your product has been deleted.",
                         icon: "success"
                       });
             })
@@ -43,14 +42,14 @@ const MyCard = ({card2}) => {
     
     return (
         <div className="card card-side bg-rose-100">
-        <figure className="pl-3 "><img className="w-[200px] rounded-xl" src={image} alt="img"/></figure>
+        <figure className="pl-3 "><img className="w-[300px] rounded-xl" src={image} alt="img"/></figure>
         <div className=" flex justify-between w-full p-4">
           <div className=" space-y-4">
           <h2 className="card-title font-semibold text-3xl">{item_name}</h2>
-          <p className=" text-base">Price:{price}</p>
-          <p className=" text-base">Rating: {rating}</p>
-          <p className=" text-base">Stock:{stock_status}</p>
-          <p className=" text-base">Customizable:{customization}</p>
+          <p className=" text-base"><a className=" font-semibold text-lg mr-2">Price:</a>{price}</p>
+          <p className=" text-base"><a className=" font-semibold text-lg mr-2">Rating:</a> {rating}</p>
+          <p className=" text-base"><a className=" font-semibold text-lg mr-2">Stock:</a>{stock_status}</p>
+          <p className=" text-base"><a className=" font-semibold text-lg mr-2">Customizable:</a>{customization}</p>
           </div>
           <div className="card-actions justify-end">
           <div className="join join-vertical mt-4 gap-24">

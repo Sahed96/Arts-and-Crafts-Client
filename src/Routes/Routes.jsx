@@ -10,6 +10,8 @@ import ViewDetails from "../Pages/ViewDetails/ViewDetails";
 import MyCraft from "../Pages/MyCraftList/MyCraft";
 import AllCrafts from "../Pages/AllCrafts/AllCrafts";
 import UpdateDetails from "../Pages/UpdateDetails/UpdateDetails";
+import Category from "../Components/Category/Category";
+import CategoryCard from "../Components/Category/CategoryCard";
 
 
 
@@ -59,6 +61,14 @@ const routes = createBrowserRouter([
             path: '/myCraft',
             element: <MyCraft/>,
             
+        },
+        {
+            path: '/categoryCraft',
+            element: <Category/>   
+        },
+        {
+            path: '/categoryCard',
+            element: <CategoryCard/>   
         },
         {
             path: '/update/:id',

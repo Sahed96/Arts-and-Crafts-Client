@@ -12,12 +12,12 @@ const AddCraft = () => {
         const price = form.price.value;
         const rating = form.rating.value;
         const time = form.time.value;
-        const bio = form.bio.value;
+        const short_description = form.short_description.value;
 		const subcategory_name = form.subcategory_name.value;
 		const customization = form.customization.value;
-		const stockStatus = form.stockStatus.value;
+		const stock_status = form.stock_status.value;
        
-        const newCraft = {item_name,image,userName,email,price,rating,time,bio,subcategory_name,customization,stockStatus}
+        const newCraft = {item_name,image,userName,email,price,rating,short_description,time,subcategory_name,customization,stock_status}
 
         // console.log(newCraft);
 
@@ -96,7 +96,7 @@ const AddCraft = () => {
 				</div>
 				<div className="col-span-full sm:col-span-3">
 					<label htmlFor="username" className="text-sm">Stock Status</label>
-					<select className='w-full p-2 border-2 rounded-md' name="stockStatus" id="stockStatus">
+					<select className='w-full p-2 border-2 rounded-md' name="stock_status" id="stockStatus">
 						<option value="">select Stock Status</option>
 						<option value="InStock">In stock</option>
 						<option value="MadeOrder">Made to Order</option>
@@ -108,7 +108,7 @@ const AddCraft = () => {
 				</div>
 				<div className="col-span-full">
 					<label htmlFor="bio" className="text-sm">short description</label>
-					<textarea id="bio" name="bio" placeholder="" className="w-full rounded-md  border-2  "></textarea>
+					<textarea id="bio" name="short_description" placeholder="" className="w-full rounded-md  border-2  "></textarea>
 				</div>
 				<div className="grid grid-cols-6 col-span-6">
                     <input type="submit" value='Add Now' className="btn col-span-full bg-rose-300"></input>
